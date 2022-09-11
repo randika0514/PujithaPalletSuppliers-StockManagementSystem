@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="supplierOrderContext" prefHeight="724.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03335e" height="50.0" stroke="#03335e" strokeType="INSIDE" width="827.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="674.0" layoutX="-1.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="827.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5145631067961165">
+               <stops>
+                  <Stop color="#3999bc" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="311.0" layoutY="5.0" text="Supplier Orders" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSupplierId" layoutX="37.0" layoutY="135.0" prefHeight="31.0" prefWidth="127.0" promptText="Supplier ID" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtSupplierName" layoutX="206.0" layoutY="135.0" promptText="Supplier Name" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtSupplierAddress" layoutX="405.0" layoutY="135.0" promptText="Address" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtSupplierContact" layoutX="603.0" layoutY="135.0" promptText="Contact" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Separator layoutX="25.0" layoutY="198.0" prefHeight="0.0" prefWidth="781.0" />
+      <ComboBox fx:id="cmbMaterialId" layoutX="37.0" layoutY="232.0" prefHeight="31.0" prefWidth="127.0" promptText="Material ID" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtMaterialType" layoutX="206.0" layoutY="232.0" prefHeight="31.0" prefWidth="153.0" promptText="Item" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtMaterialQtyOnHand" layoutX="371.0" layoutY="232.0" prefHeight="31.0" prefWidth="115.0" promptText="Qty On Hand" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtMaterialRate" layoutX="498.0" layoutY="232.0" prefHeight="31.0" prefWidth="153.0" promptText="Rate" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtQty" layoutX="663.0" layoutY="232.0" prefHeight="31.0" prefWidth="127.0" promptText="Qty" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Button fx:id="btnAddToCart" layoutX="571.0" layoutY="282.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #3742fa; -fx-background-radius: 7; -fx-border-radius: 7;" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="686.0" layoutY="282.0" mnemonicParsing="false" onAction="#btnRemoveOnAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #d63031; -fx-background-radius: 7; -fx-border-radius: 7;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblSupplierOrder" layoutX="5.0" layoutY="341.0" prefHeight="263.0" prefWidth="816.0">
+         <columns>
+            <TableColumn fx:id="colMaterialId" prefWidth="119.0" text="Material ID" />
+            <TableColumn fx:id="colType" prefWidth="173.0" text="Item" />
+            <TableColumn fx:id="colRate" prefWidth="149.0" text="Rate" />
+            <TableColumn fx:id="colQty" prefWidth="105.0" text="Qty" />
+            <TableColumn fx:id="colTotalCost" prefWidth="162.0" text="Total Cost" />
+            <TableColumn fx:id="colOption" prefWidth="107.0" text="Option" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="25.0" layoutY="618.0" prefHeight="94.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <AnchorPane prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #b33939; -fx-background-radius: 20 20 0 0;">
+               <children>
+                  <Label layoutX="65.0" layoutY="4.0" text="Total" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="lblTotal" alignment="CENTER" layoutX="3.0" layoutY="44.0" prefHeight="46.0" prefWidth="179.0" text="0.00" textFill="#b33939">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="688.0" layoutY="672.0" mnemonicParsing="false" onAction="#btnTakeOrderOnAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #009432; -fx-background-radius: 7; -fx-border-radius: 7;" text="Take Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXComboBox fx:id="cmbOrderType" layoutX="616.0" layoutY="60.0" onAction="#cmbOrderTypeOnAction" prefHeight="31.0" prefWidth="173.0" promptText="Supplier Order">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label fx:id="lblDate" layoutX="720.0" layoutY="15.0" prefHeight="21.0" prefWidth="86.0" text="2022-03-07" textFill="#03335e">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

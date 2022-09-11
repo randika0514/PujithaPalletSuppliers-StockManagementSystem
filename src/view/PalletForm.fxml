@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="palletContext" prefHeight="724.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PalletFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03335e" height="50.0" stroke="#03335e" strokeType="INSIDE" width="827.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="674.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="827.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5145631067961165">
+               <stops>
+                  <Stop color="#3999bc" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="370.0" layoutY="5.0" text="Pallets" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="104.0" text="Pallet ID        :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPalletId" layoutX="175.0" layoutY="102.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="221.0" promptText="PL-###" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Label layoutX="473.0" layoutY="104.0" text="Size    :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPalletSize" layoutX="538.0" layoutY="102.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="221.0" promptText="105 x 70" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Label layoutX="57.0" layoutY="166.0" text="Rate               :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPalletRate" layoutX="175.0" layoutY="164.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="221.0" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Label layoutX="473.0" layoutY="166.0" text="Qty On Hand   :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPalletQtyOnHand" layoutX="608.0" layoutY="164.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Label layoutX="57.0" layoutY="228.0" text="Description   :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPalletDesc" layoutX="175.0" layoutY="226.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="584.0" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Button fx:id="btnSave" layoutX="477.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #3742fa; -fx-background-radius: 7; -fx-border-radius: 7;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="577.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #fbc531; -fx-background-radius: 7; -fx-border-radius: 7;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblPallet" layoutX="12.0" layoutY="432.0" prefHeight="280.0" prefWidth="803.0">
+        <columns>
+          <TableColumn fx:id="colPalletId" prefWidth="111.0" text="ID" />
+          <TableColumn fx:id="colPalletSize" prefWidth="167.0" text="Size" />
+            <TableColumn fx:id="colPalletRate" prefWidth="152.0" text="Rate" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="129.0" text="Qty On Hand" />
+            <TableColumn fx:id="colPalletDesc" prefWidth="243.0" text="Description" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="555.0" layoutY="50.0" prefHeight="31.0" prefWidth="210.0" promptText="Search">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="776.0" layoutY="51.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-search-48.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="773.0" layoutY="50.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="37.0" text="  ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Button layoutX="676.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: red; -fx-background-radius: 7; -fx-border-radius: 7;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="29.0" layoutY="326.0" prefHeight="0.0" prefWidth="772.0" />
+      <ComboBox fx:id="cmbPalletId" layoutX="57.0" layoutY="358.0" onAction="#cmbPalletId" prefWidth="150.0" promptText="Pallet ID" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtSetPalletSize" layoutX="231.0" layoutY="358.0" prefHeight="31.0" prefWidth="151.0" promptText="Size" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtSetQtyOnHand" layoutX="405.0" layoutY="358.0" prefHeight="31.0" prefWidth="123.0" promptText="Qty On Hand" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TextField fx:id="txtQty" layoutX="552.0" layoutY="358.0" prefHeight="31.0" prefWidth="100.0" promptText="Qty" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Button layoutX="684.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #3742fa; -fx-background-radius: 7; -fx-border-radius: 7;" text="Add to Store" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

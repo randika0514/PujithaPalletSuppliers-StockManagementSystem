@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="supplierReportContext" prefHeight="724.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierReportsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03335e" height="50.0" stroke="#03335e" strokeType="INSIDE" width="827.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="674.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="827.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5145631067961165">
+               <stops>
+                  <Stop color="#3999bc" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="300.0" layoutY="5.0" text="Suppliers' Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSupplierReport" layoutX="13.0" layoutY="128.0" prefHeight="580.0" prefWidth="801.0">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="205.0" text="Order ID" />
+            <TableColumn fx:id="colSupplierId" prefWidth="228.0" text="Supplier ID" />
+            <TableColumn fx:id="colItem" prefWidth="203.0" text="Item" />
+            <TableColumn fx:id="colOrderDate" prefWidth="164.0" text="Order Date" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbOption" layoutX="644.0" layoutY="61.0" onAction="#cmbOptionOnAction" prefHeight="31.0" prefWidth="156.0" promptText="Suppliers Report" />
+   </children>
+</AnchorPane>

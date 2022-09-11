@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="additionalCostContext" prefHeight="724.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdditionalCostFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03335e" height="50.0" stroke="#03335e" strokeType="INSIDE" width="827.0" />
+      <Label layoutX="312.0" layoutY="5.0" text="Additional Cost" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="674.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="827.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5145631067961165">
+               <stops>
+                  <Stop color="#3999bc" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXTextField fx:id="txtSearch" layoutX="554.0" layoutY="51.0" prefHeight="31.0" prefWidth="210.0" promptText="Search">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="775.0" layoutY="51.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-search-48.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="772.0" layoutY="51.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="37.0" text="  ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="104.0" layoutY="188.0" text="Description    :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescription" layoutX="238.0" layoutY="186.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="487.0" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Label layoutX="459.0" layoutY="255.0" text="Cost          :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCost" layoutX="566.0" layoutY="253.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="159.0" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <Label layoutX="104.0" layoutY="255.0" text="Date               :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="238.0" layoutY="253.0" prefHeight="31.0" prefWidth="159.0" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+      <TableView fx:id="tblAdditionalCost" layoutX="13.0" layoutY="399.0" prefHeight="311.0" prefWidth="802.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="144.0" text="ID" />
+          <TableColumn fx:id="colDescription" prefWidth="300.0" text="Description" />
+            <TableColumn fx:id="colDate" prefWidth="187.0" text="Date" />
+            <TableColumn fx:id="colCost" prefWidth="170.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="436.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #3742fa; -fx-background-radius: 7; -fx-border-radius: 7;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="539.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #fbc531; -fx-background-radius: 7; -fx-border-radius: 7;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="642.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: red; -fx-background-radius: 7; -fx-background-radius: 7;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="102.0" layoutY="121.0" text="ID                    :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="238.0" layoutY="119.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="159.0" promptText="A-001" style="-fx-background-radius: 7; -fx-border-radius: 7;" />
+   </children>
+</AnchorPane>

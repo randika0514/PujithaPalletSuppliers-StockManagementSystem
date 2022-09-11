@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="724.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="724.0" prefWidth="273.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="724.0" stroke="BLACK" strokeType="INSIDE" width="273.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.014563106796116505" startX="0.6699029126213593" startY="0.9271844660194174">
+               <stops>
+                  <Stop color="#1f79ff" />
+                  <Stop color="#0b3e6e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="112.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_account_circle_white_24dp.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="64.0" text="Pujitha Pushpakumara" textFill="#f9ca24">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="65.0" layoutY="645.0" prefHeight="51.0" prefWidth="143.0" text="12:00:45" textFill="#f9ca24">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="89.0" layoutY="689.0" prefHeight="27.0" prefWidth="97.0" text="10/03/2022">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="dashboardContext" layoutX="273.0" prefHeight="724.0" prefWidth="804.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="674.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="827.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.5097087378640777" startY="0.11165048543689321">
+                     <stops>
+                        <Stop color="#60a3bc" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03335e" height="50.0" stroke="#175894" strokeType="INSIDE" width="827.0" />
+            <Label layoutX="342.0" layoutY="5.0" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="39.0" layoutY="76.0" prefHeight="148.0" prefWidth="212.0" style="-fx-background-color: #fbc531; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Pallets" textFill="#dfe6e9">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPalletsCount" layoutX="14.0" layoutY="38.0" prefHeight="99.0" prefWidth="112.0" text="0" textFill="#dfe6e9">
+                     <font>
+                        <Font size="67.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="74.0" fitWidth="65.0" layoutX="135.0" layoutY="38.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/icons8-pallet-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="308.0" layoutY="76.0" prefHeight="148.0" prefWidth="212.0" style="-fx-background-color: #27ae60; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="16.0" layoutY="14.0" text="Orders" textFill="#dfe6e9">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrdersCount" layoutX="11.0" layoutY="38.0" prefHeight="67.0" prefWidth="112.0" text="0" textFill="#dfe6e9">
+                     <font>
+                        <Font size="67.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="74.0" fitWidth="65.0" layoutX="130.0" layoutY="36.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/icons8-delivery-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="577.0" layoutY="76.0" prefHeight="148.0" prefWidth="212.0" style="-fx-background-color: #eb4d4b; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Buyers" textFill="#dfe6e9">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBuyersCount" layoutX="19.0" layoutY="38.0" prefHeight="67.0" prefWidth="112.0" text="0" textFill="#dfe6e9">
+                     <font>
+                        <Font size="67.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="74.0" fitWidth="65.0" layoutX="131.0" layoutY="37.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/icons8-person-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXButton alignment="TOP_LEFT" layoutY="118.0" onAction="#btnDashboardOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutY="102.0" prefHeight="0.0" prefWidth="273.0" />
+      <JFXButton alignment="TOP_LEFT" layoutY="166.0" onAction="#btnBuyersOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Buyers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="212.0" onAction="#btnSupplierOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Suppliers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="259.0" onAction="#btnEmployeeOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Employees" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="306.0" onAction="#btnPalletOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Pallets" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="353.0" onAction="#btnOrderOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Orders" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="400.0" onAction="#btnMaterialOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Materials" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="447.0" onAction="#btnReportsOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutY="494.0" onAction="#btnAdditionalCostOnAction" prefHeight="31.0" prefWidth="273.0" text="                 Additional Cost" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="127.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-dashboard-32.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="174.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-person-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="222.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-supplier-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="270.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-employees-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="316.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-pallet-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="363.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-delivery-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="409.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-wood-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="455.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-bill-66.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="501.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-cost-50.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="TOP_LEFT" layoutY="580.0" onAction="#btnLogOutOnAction" prefHeight="42.0" prefWidth="273.0" text="                 Log Out" textFill="#bc182e">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="589.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icons8-logout-rounded-left-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="503.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="456.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="409.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="363.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="315.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="268.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="221.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="175.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="243.0" layoutY="127.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/outline_navigate_next_white_24dp.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
